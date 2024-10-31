@@ -3,7 +3,8 @@
 Examen de diseño de patrones
 Nombre: Sebastián López Osorno
 
-Punto#1
+1. Preguntas Teóricas (1,0 unidades): Responda las preguntas escribiendo comentarios en el
+mismo archivo de código donde resolverá la pregunta práctica:
 
 1.1. ¿Cuáles son 2 ventajas de utilizar el patrón Prototype en comparación con otros patrones creacionales como Builder o Factory Method? 
 
@@ -123,7 +124,7 @@ En este caso, haciendo uso del patron observer, se puede plantear la impresora c
 la clase notificadora debe contener una estrutura dinamica iterable, como una lista para almacenar sus observadores que se han suscrito a la información de estado que va a brindar
 el notificador, pero esto sin necesidad de conocer cada uno de los objetos referenciados en la lista, ni mucho menos notificando a cada uno. Esta caracteristica de Observer se puede
 usar para la notificación de finalización de un trabajo, dado que los usuarios que requiran suscribirse a la información del estado de impresora, podran ser notificados de forma distribuida.
- 
+
 
 3.3. Si quisieras agregar una funcionalidad que permitiera a los usuarios "pausar" y "reanudar" un trabajo de impresión, ¿qué patrón aplicarías para gestionar esta 
 funcionalidad?
