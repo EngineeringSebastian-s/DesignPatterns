@@ -109,12 +109,14 @@ de productos sin importar sus especificaciones tecnicas, por lo cual se podria p
 sin embargo al continuar con el ejercicio se puede identificar una mayor complejidad, por lo que migramos a un patron como Abstract Factory, donde se puede crear una fabrica que
 crea otras fabricas(para familia de productos), que generen los diferentes productos con sus variaciones.
 
+El uso de este patron permite que el User acceda a una sola interfaz, que seria la fabrica generadora de fabricas, pero acopla mas, dado que se depende de la clase de cada Fabrica concreta.
+
 Combinaciones:
 
                     Impresoras de docuemntos | impresora de fotografias | impresoras de plitters
-    documentos
-    fotografias
-    plotters
+    documentos              docs                        docs                    docs 
+    fotografias              x                            x                        x
+    plotters                 x                            x                        x
 
 
 
