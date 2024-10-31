@@ -38,6 +38,28 @@
             background: #45a049;
         }
     </style>
+     <script src="./js/Singleton.js"></script>
+     <script src="./js/Factory.js"></script>
+     <script src="./js/AbstractFactory.js"></script>
+     <script src="./js/Builder.js"></script>
+     <script src="./js/Prototype.js"></script>
+     <script src="./js/Adapter.js"></script>
+     <script src="./js/Bridge.js"></script>
+     <script src="./js/Composite.js"></script>
+     <script src="./js/Decorator.js"></script>
+     <script src="./js/Facade.js"></script>
+     <script src="./js/Flyweight.js"></script>
+     <script src="./js/Proxy.js"></script>
+     <script src="./js/Observer.js"></script>
+     <script src="./js/Strategy.js"></script>
+     <script src="./js/Command.js"></script>
+     <script src="./js/Iterator.js"></script>
+     <script src="./js/Mediator.js"></script>
+     <script src="./js/Memento.js"></script>
+     <script src="./js/State.js"></script>
+     <script src="./js/Template.js"></script>
+     <script src="./js/Visitor.js"></script>
+ 
 </head>
 <body>
     <h1>Patrones de Diseño en JavaScript</h1>
@@ -83,122 +105,6 @@
 
     <div class="console" id="console"></div>
 
-    <script type="module">
-       import { appSingleton } from './js/Singleton.js';
-        import { appFactory } from './js/Factory.js';
-        import { appAbstractFactory } from './js/AbstractFactory.js';
-        import { appBuilder } from './js/Builder.js';
-        import { appPrototype } from './js/Prototype.js';
-        import { appAdapter } from './js/Adapter.js';
-        import { appBridge } from './js/Bridge.js';
-        import { appComposite } from './js/Composite.js';
-        import { appDecorator } from './js/Decorator.js';
-        import { appFacade } from './js/Facade.js';
-        import { appFlyweight } from './js/Flyweight.js';
-        import { appProxy } from './js/Proxy.js';
-        import { appObserver } from './js/Observer.js';
-        import { appStrategy } from './js/Strategy.js';
-        import { appCommand } from './js/Command.js';
-        import { appIterator } from './js/Iterator.js';
-        import { appMediator } from './js/Mediator.js';
-        import { appMemento } from './js/Memento.js';
-        import { appState } from './js/State.js';
-        import { appTemplate } from './js/Template.js';
-        import { appVisitor } from './js/Visitor.js';
-        import { appCoR } from './js/Cor.js'
 
-        const consoleDiv = document.getElementById('console');
-
-        function logToConsole(message) {
-            consoleDiv.textContent += message + '\n';
-            consoleDiv.scrollTop = consoleDiv.scrollHeight;
-        }
-
-        window.appSingleton = function() {
-            appSingleton();
-            
-        };
-        window.appFactory = function() {
-            const result = appFactory();
-            logToConsole(result);
-        };
-        window.appAbstractFactory = function() {
-            const result = appAbstractFactory();
-            logToConsole(result);
-        };
-        window.appBuilder = function() {
-            const result = appBuilder();
-            logToConsole(result);
-        };
-        window.appPrototype = function() {
-            const result = appPrototype();
-            logToConsole(result);
-        };
-        window.appAdapter = function() {
-            const result = appAdapter();
-            logToConsole(result);
-        };
-        window.appBridge = function() {
-            const result = appBridge();
-            logToConsole(result);
-        };
-        window.appComposite = function() {
-            const result = appComposite();
-            logToConsole(result);
-        };
-        window.appDecorator = function() {
-            const result = appDecorator();
-            logToConsole(result);
-        };
-        window.appFacade = function() {
-            const result = appFacade();
-            logToConsole(result);
-        };
-        window.appFlyweight = function() {
-            const result = appFlyweight();
-            logToConsole(result);
-        };
-        window.appProxy = function() {
-            const result = appProxy();
-            logToConsole(result);
-        };
-        window.appObserver = function() {
-            const result = appObserver();
-            logToConsole(result);
-        };
-        window.appStrategy = function() {
-            const result = appStrategy();
-            logToConsole(result);
-        };
-        window.appCommand = function() {
-            const result = appCommand();
-            logToConsole(result);
-        };
-        window.appIterator = function() {
-            const result = appIterator();
-            logToConsole(result);
-        };
-        window.appMediator = function() {
-            const result = appMediator();
-            logToConsole(result);
-        };
-        window.appMemento = function() {
-            const result = appMemento();
-            logToConsole(result);
-        };
-        window.appState = function() {
-            const result = appState();
-            logToConsole(result);
-        };
-        window.appTemplate = function() {
-            const result = appTemplate();
-            logToConsole(result);
-        };
-        window.appVisitor = function() {
-            const result = appVisitor();
-            logToConsole(result);
-        };
-
-    </script>
 </body>
 </html>
