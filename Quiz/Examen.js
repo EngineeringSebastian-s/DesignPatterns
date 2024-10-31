@@ -119,11 +119,18 @@ Combinaciones:
 
 3.2. ¿Cómo podrías usar el patrón Observer para notificar a los usuarios cuando la impresora ha completado un trabajo?
 
-En este caso, haciendo uso del patron observer, se puede plantear la impresora como un notificador que informa sobre sus estado a sus trabajadores (Observer), mediante
+En este caso, haciendo uso del patron observer, se puede plantear la impresora como un notificador que informa sobre sus estado a sus trabajadores (Observer), basado en este esquema
+la clase notificadora debe contener una estrutura dinamica iterable, como una lista para almacenar sus observadores que se han suscrito a la información de estado que va a brindar
+el notificador, pero esto sin necesidad de conocer cada uno de los objetos referenciados en la lista, ni mucho menos notificando a cada uno. Esta caracteristica de Observer se puede
+usar para la notificación de finalización de un trabajo, dado que los usuarios que requiran suscribirse a la información del estado de impresora, podran ser notificados de forma distribuida.
+ 
 
 3.3. Si quisieras agregar una funcionalidad que permitiera a los usuarios "pausar" y "reanudar" un trabajo de impresión, ¿qué patrón aplicarías para gestionar esta 
 funcionalidad?
 
-Command
+El patron mas optimo que se puede usar para agregar funciones como "pausar" y "reanudar" es command, dado que su estructura permite encapsular operaciones que se pueden revertir(deshacer)
+o volver a realizar(reacher), dado que guarda los comandos en una estructura dinamica, permitiendo devolverse en esa cola de solicitudes. Este patron crea una clase invocadora
+que usa el usuario para llamar los diferentes comandos implementados de la interfaz comandos, permitiendo definir sus acciones concretas y devolverse en ellas, por lo que se crea un uso
+indirecto de las implementaciones concretas, pero realmente todo se hace mediante el invocador.
 
 */
