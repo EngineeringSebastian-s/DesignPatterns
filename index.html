@@ -16,47 +16,71 @@
             height: 200px;
             overflow-y: auto;
             white-space: pre;
+            margin-top: 20px;
+        }
+        .pattern-category {
+            margin-bottom: 20px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
         }
         button {
-            margin: 5px;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
         }
     </style>
 </head>
 <body>
     <h1>Patrones de Diseño en JavaScript</h1>
 
-    <h2>Creacionales</h2>
-    <ul>
-        <li><button onclick="singleton()">Singleton</button></li>
-        <li><button onclick="factory()">Factory</button></li>
-        <li><button onclick="abstractFactory()">Abstract Factory</button></li>
-        <li><button onclick="builder()">Builder</button></li>
-        <li><button onclick="prototype()">Prototype</button></li>
-    </ul>
+    <div class="pattern-category">
+        <h2>Creacionales</h2>
+        <div class="button-grid">
+            <button onclick="singleton()">Singleton</button>
+            <button onclick="factory()">Factory</button>
+            <button onclick="abstractFactory()">Abstract Factory</button>
+            <button onclick="builder()">Builder</button>
+            <button onclick="prototype()">Prototype</button>
+        </div>
+    </div>
 
-    <h2>Estructurales</h2>
-    <ul>
-        <li><button onclick="adapter()">Adapter</button></li>
-        <li><button onclick="bridge()">Bridge</button></li>
-        <li><button onclick="composite()">Composite</button></li>
-        <li><button onclick="decorator()">Decorator</button></li>
-        <li><button onclick="facade()">Facade</button></li>
-        <li><button onclick="flyweight()">Flyweight</button></li>
-        <li><button onclick="proxy()">Proxy</button></li>
-    </ul>
+    <div class="pattern-category">
+        <h2>Estructurales</h2>
+        <div class="button-grid">
+            <button onclick="adapter()">Adapter</button>
+            <button onclick="bridge()">Bridge</button>
+            <button onclick="composite()">Composite</button>
+            <button onclick="decorator()">Decorator</button>
+            <button onclick="facade()">Facade</button>
+            <button onclick="flyweight()">Flyweight</button>
+            <button onclick="proxy()">Proxy</button>
+        </div>
+    </div>
 
-    <h2>Comportamentales</h2>
-    <ul>
-        <li><button onclick="observer()">Observer</button></li>
-        <li><button onclick="strategy()">Strategy</button></li>
-        <li><button onclick="command()">Command</button></li>
-        <li><button onclick="iterator()">Iterator</button></li>
-        <li><button onclick="mediator()">Mediator</button></li>
-        <li><button onclick="memento()">Memento</button></li>
-        <li><button onclick="state()">State</button></li>
-        <li><button onclick="template()">Template Method</button></li>
-        <li><button onclick="visitor()">Visitor</button></li>
-    </ul>
+    <div class="pattern-category">
+        <h2>Comportamentales</h2>
+        <div class="button-grid">
+            <button onclick="observer()">Observer</button>
+            <button onclick="strategy()">Strategy</button>
+            <button onclick="command()">Command</button>
+            <button onclick="iterator()">Iterator</button>
+            <button onclick="mediator()">Mediator</button>
+            <button onclick="memento()">Memento</button>
+            <button onclick="state()">State</button>
+            <button onclick="template()">Template Method</button>
+            <button onclick="visitor()">Visitor</button>
+            <button onclick="CoR()">Chain of Responsability</button>
+        </div>
+    </div>
 
     <div class="console" id="console"></div>
 
@@ -113,6 +137,7 @@
         window.state = function() { logToConsole('Función State no implementada'); };
         window.template = function() { logToConsole('Función Template no implementada'); };
         window.visitor = function() { logToConsole('Función Visitor no implementada'); };
+        window.CoR = function() { logToConsole('Función Chain Of Responsability no implementada'); };
     </script>
 </body>
 </html>
