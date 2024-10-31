@@ -45,75 +45,159 @@
     <div class="pattern-category">
         <h2>Creacionales</h2>
         <div class="button-grid">
-            <button onclick="singleton()">Singleton</button>
-            <button onclick="factory()">Factory</button>
-            <button onclick="abstractFactory()">Abstract Factory</button>
-            <button onclick="builder()">Builder</button>
-            <button onclick="prototype()">Prototype</button>
+            <button onclick="appSingleton()">Singleton</button>
+            <button onclick="appFactory()">Factory</button>
+            <button onclick="appAbstractFactory()">Abstract Factory</button>
+            <button onclick="appBuilder()">Builder</button>
+            <button onclick="appPrototype()">Prototype</button>
         </div>
     </div>
 
     <div class="pattern-category">
         <h2>Estructurales</h2>
         <div class="button-grid">
-            <button onclick="adapter()">Adapter</button>
-            <button onclick="bridge()">Bridge</button>
-            <button onclick="composite()">Composite</button>
-            <button onclick="decorator()">Decorator</button>
-            <button onclick="facade()">Facade</button>
-            <button onclick="flyweight()">Flyweight</button>
-            <button onclick="proxy()">Proxy</button>
+            <button onclick="appAdapter()">Adapter</button>
+            <button onclick="appBridge()">Bridge</button>
+            <button onclick="appComposite()">Composite</button>
+            <button onclick="appDecorator()">Decorator</button>
+            <button onclick="appFacade()">Facade</button>
+            <button onclick="appFlyweight()">Flyweight</button>
+            <button onclick="appProxy()">Proxy</button>
         </div>
     </div>
 
     <div class="pattern-category">
         <h2>Comportamentales</h2>
         <div class="button-grid">
-            <button onclick="observer()">Observer</button>
-            <button onclick="strategy()">Strategy</button>
-            <button onclick="command()">Command</button>
-            <button onclick="iterator()">Iterator</button>
-            <button onclick="mediator()">Mediator</button>
-            <button onclick="memento()">Memento</button>
-            <button onclick="state()">State</button>
-            <button onclick="template()">Template Method</button>
-            <button onclick="visitor()">Visitor</button>
-            <button onclick="CoR()">Chain of Responsability</button>
+            <button onclick="appObserver()">Observer</button>
+            <button onclick="appStrategy()">Strategy</button>
+            <button onclick="appCommand()">Command</button>
+            <button onclick="appIterator()">Iterator</button>
+            <button onclick="appMediator()">Mediator</button>
+            <button onclick="appMemento()">Memento</button>
+            <button onclick="appState()">State</button>
+            <button onclick="appTemplate()">Template Method</button>
+            <button onclick="appVisitor()">Visitor</button>
         </div>
     </div>
 
     <div class="console" id="console"></div>
 
     <script type="module">
-        import Singleton from './js/Singleton.js';
-        import Factory from './js/Factory.js';
-        import AbstractFactory from './js/AbstractFactory.js';
-        import Builder from './js/Builder.js';
-        import Prototype from './js/Prototype.js';
-        import Adapter from './js/Adapter.js';
-        import Bridge from './js/Bridge.js';
-        import Composite from './js/Composite.js';
-        import Decorator from './js/Decorator.js';
-        import Facade from './js/Facade.js';
-        import Flyweight from './js/Flyweight.js';
-        import Proxy from './js/Proxy.js';
-        import Observer from './js/Observer.js';
-        import Strategy from './js/Strategy.js'; 
-        import Command from './js/Command.js';
-        import Iterator from './js/Iterator.js';
-        import Mediator from './js/Mediator.js';
-        import Memento from './js/Memento.js';
-        import State from './js/State.js';
-        import Template from './js/Template.js';
-        import Visitor from './js/Visitor.js';
-        import CoR from './js/CoR.js'
+       import { appSingleton } from './js/Singleton.js';
+        import { appFactory } from './js/Factory.js';
+        import { appAbstractFactory } from './js/AbstractFactory.js';
+        import { appBuilder } from './js/Builder.js';
+        import { appPrototype } from './js/Prototype.js';
+        import { appAdapter } from './js/Adapter.js';
+        import { appBridge } from './js/Bridge.js';
+        import { appComposite } from './js/Composite.js';
+        import { appDecorator } from './js/Decorator.js';
+        import { appFacade } from './js/Facade.js';
+        import { appFlyweight } from './js/Flyweight.js';
+        import { appProxy } from './js/Proxy.js';
+        import { appObserver } from './js/Observer.js';
+        import { appStrategy } from './js/Strategy.js';
+        import { appCommand } from './js/Command.js';
+        import { appIterator } from './js/Iterator.js';
+        import { appMediator } from './js/Mediator.js';
+        import { appMemento } from './js/Memento.js';
+        import { appState } from './js/State.js';
+        import { appTemplate } from './js/Template.js';
+        import { appVisitor } from './js/Visitor.js';
+        import { appCoR } from './js/Cor.js'
 
         const consoleDiv = document.getElementById('console');
 
         function logToConsole(message) {
             consoleDiv.textContent += message + '\n';
-            consoleDiv.scrollTop = consoleDiv.scrollHeight; // Desplazamiento automático
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
         }
+
+        window.appSingleton = function() {
+            appSingleton();
+            
+        };
+        window.appFactory = function() {
+            const result = appFactory();
+            logToConsole(result);
+        };
+        window.appAbstractFactory = function() {
+            const result = appAbstractFactory();
+            logToConsole(result);
+        };
+        window.appBuilder = function() {
+            const result = appBuilder();
+            logToConsole(result);
+        };
+        window.appPrototype = function() {
+            const result = appPrototype();
+            logToConsole(result);
+        };
+        window.appAdapter = function() {
+            const result = appAdapter();
+            logToConsole(result);
+        };
+        window.appBridge = function() {
+            const result = appBridge();
+            logToConsole(result);
+        };
+        window.appComposite = function() {
+            const result = appComposite();
+            logToConsole(result);
+        };
+        window.appDecorator = function() {
+            const result = appDecorator();
+            logToConsole(result);
+        };
+        window.appFacade = function() {
+            const result = appFacade();
+            logToConsole(result);
+        };
+        window.appFlyweight = function() {
+            const result = appFlyweight();
+            logToConsole(result);
+        };
+        window.appProxy = function() {
+            const result = appProxy();
+            logToConsole(result);
+        };
+        window.appObserver = function() {
+            const result = appObserver();
+            logToConsole(result);
+        };
+        window.appStrategy = function() {
+            const result = appStrategy();
+            logToConsole(result);
+        };
+        window.appCommand = function() {
+            const result = appCommand();
+            logToConsole(result);
+        };
+        window.appIterator = function() {
+            const result = appIterator();
+            logToConsole(result);
+        };
+        window.appMediator = function() {
+            const result = appMediator();
+            logToConsole(result);
+        };
+        window.appMemento = function() {
+            const result = appMemento();
+            logToConsole(result);
+        };
+        window.appState = function() {
+            const result = appState();
+            logToConsole(result);
+        };
+        window.appTemplate = function() {
+            const result = appTemplate();
+            logToConsole(result);
+        };
+        window.appVisitor = function() {
+            const result = appVisitor();
+            logToConsole(result);
+        };
 
     </script>
 </body>
