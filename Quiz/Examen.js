@@ -35,12 +35,65 @@ Interfaz Tipos de Vehiculos (Contenedor)
 Para trabajar con el patron Flyweight, se debe identificar los atributos intrínsecos(datos compartidos) y extrínsecos (datos con variaciones), en este caso los datos que
 comparten son color, tipo de motor, marca 
 */
-class
+
+class TipoVehiculo {
+    constructor(color, tipo_motor, marca) {
+        this.color = color;
+        this.tipo_motor = tipo_motor;
+        this.marca = marca;
+    }
+
+    display(x, y, speed) {
+        console.log(`Mostrando el vehiculo de la marca ${this.marca} de color ${this.color} con motor${this.tipo_motor} en las coordenadas (${x}, ${y}) con una velocidad de ${speed} KM/H`);
+    }
+}
 
 
+class FabricaVehiculo {
+    constructor() {
+        this.TiposVehiculos = {}; 
+    }
 
+    getTipoVehiculo(color, tipo_motor, marca) {
+         const key = `${color}-${tipo_motor}-${marca}`;
+         if (!this.TiposVehiculos[key]) {
+             this.TiposVehiculos[key] = new TipoVehiculo(color, tipo_motor, marca);
+         }
+         return this.TiposVehiculos[key];
+    }
+   
+}
 
-class 
+class Vehiculo {
+    constructor(x, y, speed,type) {
+        this.x = x; 
+        this.y = y;
+        this.speed = speed;
+        this.type = type; 
+    }
+
+    display() {
+        this.type.display(this.x, this.y, this.speed);
+    }
+}
+
+//Se puede crear una clase contenedora llamada ciudad, que tenga una lista de los vehiculos
+
+function appExamen(){
+    const factory = new FabricaVehiculo();
+
+    const vehiculo1 = new Vehiculo(10, 20, 40, factory.getTipoVehiculo("Rojo","Combustion","Tesla"));
+    const vehiculo2 = new Vehiculo(30, 40, 60,  factory.getTipoVehiculo("Rojo","Combustion","Tesla"));
+    const vehiculo3 = new Vehiculo(50, 60, 30, factory.getTipoVehiculo("Verde","Combustion","Tesla"));
+
+    vehiculo1.display(); 
+    vehiculo2.display(); 
+    vehiculo3.display();
+
+    console.log(`¿El tipo de vehiculo del objeto uno es igual al tipo de vehiculo del vechiulo dos? ${vehiculo1.type===vehiculo2.type}`);
+    console.log(`¿El tipo de vehiculo del objeto uno es igual al tipo de vehiculo del vechiulo tres? ${vehiculo1.type===vehiculo3.type}`);
+    console.log(`¿El tipo de vehiculo del objeto dos es igual al tipo de vehiculo del vechiulo tres? ${vehiculo2.type===vehiculo3.type}`);
+}
 
 /*
 3. Preguntas de caso de uso (1,5 unidades): Responda las preguntas escribiendo comentarios en el mismo archivo de código donde resolvió la pregunta práctica:
@@ -70,7 +123,6 @@ En este caso, haciendo uso del patron observer, se puede plantear la impresora c
 
 3.3. Si quisieras agregar una funcionalidad que permitiera a los usuarios "pausar" y "reanudar" un trabajo de impresión, ¿qué patrón aplicarías para gestionar esta 
 funcionalidad?
-
 
 Command
 
