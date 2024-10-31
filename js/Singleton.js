@@ -28,7 +28,7 @@ function appSingleton(){
 
     if(singleton1 === singleton2 && singleton2 === singleton3){
         console.log('Singleton funciona ya que la conexión 1, conexion 2 y conexión 3 apunta a la misma instancia de objeto');
-        console.log('¿Singleton1, Singleton2, Singleton3 son iguales?:' + singleton1 === singleton2 && singleton2 === singleton3);
+        console.log(singleton1 === singleton2 && singleton2 === singleton3);
     }
     return('Error');
     
