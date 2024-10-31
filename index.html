@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrones de Diseño en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .console {
+            background: #000;
+            color: #0f0;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            white-space: pre;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patrones de Diseño en JavaScript</h1>
+
+    <h2>Creacionales</h2>
+    <ul>
+        <li><button onclick="singleton()">Singleton</button></li>
+        <li><button onclick="factory()">Factory</button></li>
+        <li><button onclick="abstractFactory()">Abstract Factory</button></li>
+        <li><button onclick="builder()">Builder</button></li>
+        <li><button onclick="prototype()">Prototype</button></li>
+    </ul>
+
+    <h2>Estructurales</h2>
+    <ul>
+        <li><button onclick="adapter()">Adapter</button></li>
+        <li><button onclick="bridge()">Bridge</button></li>
+        <li><button onclick="composite()">Composite</button></li>
+        <li><button onclick="decorator()">Decorator</button></li>
+        <li><button onclick="facade()">Facade</button></li>
+        <li><button onclick="flyweight()">Flyweight</button></li>
+        <li><button onclick="proxy()">Proxy</button></li>
+    </ul>
+
+    <h2>Comportamentales</h2>
+    <ul>
+        <li><button onclick="observer()">Observer</button></li>
+        <li><button onclick="strategy()">Strategy</button></li>
+        <li><button onclick="command()">Command</button></li>
+        <li><button onclick="iterator()">Iterator</button></li>
+        <li><button onclick="mediator()">Mediator</button></li>
+        <li><button onclick="memento()">Memento</button></li>
+        <li><button onclick="state()">State</button></li>
+        <li><button onclick="template()">Template Method</button></li>
+        <li><button onclick="visitor()">Visitor</button></li>
+    </ul>
+
+    <div class="console" id="console"></div>
+
+    <script type="module">
+        import Singleton from './js/Singleton.js';
+        import Factory from './js/Factory.js';
+        import AbstractFactory from './js/AbstractFactory.js';
+        import Builder from './js/Builder.js';
+        import Prototype from './js/Prototype.js';
+        import Adapter from './js/Adapter.js';
+        import Bridge from './js/Bridge.js';
+        import Composite from './js/Composite.js';
+        import Decorator from './js/Decorator.js';
+        import Facade from './js/Facade.js';
+        import Flyweight from './js/Flyweight.js';
+        import Proxy from './js/Proxy.js';
+        import Observer from './js/Observer.js';
+        import Strategy from './js/Strategy.js';
+        import Command from './js/Command.js';
+        import Iterator from './js/Iterator.js';
+        import Mediator from './js/Mediator.js';
+        import Memento from './js/Memento.js';
+        import State from './js/State.js';
+        import Template from './js/Template.js';
+        import Visitor from './js/Visitor.js';
+
+        const consoleDiv = document.getElementById('console');
+
+        function logToConsole(message) {
+            consoleDiv.textContent += message + '\n';
+            consoleDiv.scrollTop = consoleDiv.scrollHeight; // Desplazamiento automático
+        }
+
+        // Marcadores de funciones
+        window.singleton = function() { logToConsole('Función Singleton no implementada'); };
+        window.factory = function() { logToConsole('Función Factory no implementada'); };
+        window.abstractFactory = function() { logToConsole('Función Abstract Factory no implementada'); };
+        window.builder = function() { logToConsole('Función Builder no implementada'); };
+        window.prototype = function() { logToConsole('Función Prototype no implementada'); };
+        window.adapter = function() { logToConsole('Función Adapter no implementada'); };
+        window.bridge = function() { logToConsole('Función Bridge no implementada'); };
+        window.composite = function() { logToConsole('Función Composite no implementada'); };
+        window.decorator = function() { logToConsole('Función Decorator no implementada'); };
+        window.facade = function() { logToConsole('Función Facade no implementada'); };
+        window.flyweight = function() { logToConsole('Función Flyweight no implementada'); };
+        window.proxy = function() { logToConsole('Función Proxy no implementada'); };
+        window.observer = function() { logToConsole('Función Observer no implementada'); };
+        window.strategy = function() { logToConsole('Función Strategy no implementada'); };
+        window.command = function() { logToConsole('Función Command no implementada'); };
+        window.iterator = function() { logToConsole('Función Iterator no implementada'); };
+        window.mediator = function() { logToConsole('Función Mediator no implementada'); };
+        window.memento = function() { logToConsole('Función Memento no implementada'); };
+        window.state = function() { logToConsole('Función State no implementada'); };
+        window.template = function() { logToConsole('Función Template no implementada'); };
+        window.visitor = function() { logToConsole('Función Visitor no implementada'); };
+    </script>
+</body>
+</html>
