@@ -7,8 +7,8 @@ class ScrappingTemplate{
         Validation()
     }
 
-    SelectWeb(web){
-        console.log("La web " + web + " ha sido seleccionada")
+    SelectWeb(){
+        console.log("La web ha sido seleccionada")
     }
 
     SendHTTP(){
