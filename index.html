@@ -59,7 +59,6 @@
      <script src="./js/State.js"></script>
      <script src="./js/Template.js"></script>
      <script src="./js/Visitor.js"></script>
- 
 </head>
 <body>
     <h1>Patrones de Diseño en JavaScript</h1>
@@ -105,6 +104,16 @@
 
     <div class="console" id="console"></div>
 
+    <script>
+        function updateConsole(message) {
+            const consoleDiv = document.getElementById('console');
+            consoleDiv.textContent += message + '\n';
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
 
+        console.log = function(message) {
+            updateConsole(message);
+        };
+     </script>
 </body>
 </html>
