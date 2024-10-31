@@ -21,7 +21,7 @@ class Singleton{
     }
 }
 
-function appSingleton(){
+export function appSingleton(){
     const singleton1 = Singleton.getInstance('conexion1');
     const singleton2 = Singleton.getInstance('conexion2');
     const singleton3 = Singleton.getInstance('conexion3');
