@@ -1,10 +1,10 @@
 class ScrappingTemplate{
     makeScrapping(){
-        SelectWeb()
-        SendHTTP()
-        AnalyzeContent()
-        StructuredData()
-        Validation()
+        this.SelectWeb();
+        this.SendHTTP();
+        this.AnalyzeContent();
+        this.StructuredData();
+        this.Validation();
     }
 
     SelectWeb(){
