@@ -30,7 +30,7 @@ class TravelContext{
     }
 
     executeStrategy(destination){
-        StrategyTravel.Travel(destination);
+        this.strategy.Travel(destination);
     }
 }
 
